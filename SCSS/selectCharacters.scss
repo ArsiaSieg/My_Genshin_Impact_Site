@@ -37,15 +37,6 @@ td p
 }
 
 
-.separateur_top
-{
-  display: block;
-  width: 100%;
-  margin-top: -15px;
-  height: auto;
-  position: relative;
-}
-
 .separateur
 {
   display: block;
@@ -53,6 +44,14 @@ td p
   height: auto;
   margin: auto;
   padding : 20px 0 20px 0;
+
+  &_top{
+  display: block;
+  width: 100%;
+  margin-top: -15px;
+  height: auto;
+  position: relative;
+  }
 }
 
 
@@ -67,6 +66,16 @@ td p
   background-color: rgba(0, 0, 0, 0.8);
   position: sticky;
   top : -155px;
+  z-index : 2;
+
+  a{
+  text-decoration: none;
+  color: silver;
+  font-weight: bold;
+	&:hover{
+	  border-bottom: 1px solid silver;
+	}
+  }
 }
 
 #reseaux
@@ -104,19 +113,6 @@ td p
 
 
 
-#entête a
-{
-  text-decoration: none;
-  color: silver;
-  font-weight: bold;
-}
-
-#entête a:hover
-{
-  border-bottom: 1px solid silver;
-}
-
-
 #logo_top
 {
   width: 10%;
@@ -132,21 +128,20 @@ td p
   list-style-type: none;
   display: flex;
   justify-content: center;
+  li {
+	  padding-left: 15px;
+	  padding-right: 15px;
+  }
 }
 
-#menu li
-{
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 
 .IMG {
   transition: transform 0.3s ease-in-out;
-}
-
-.IMG:hover
-{
-  transform : scale(1.2);
+  &:hover
+  {
+  	transform : scale(1.2);
+  }
 }
 
 
@@ -167,7 +162,7 @@ article{
   width: 100%;
 }
 
-#menuCompetences{
+#menuElements{
   list-style-image: url("GenshinImages/ico_liensexterne.png");
   list-style-type: none;
   width: 240px;
@@ -179,24 +174,27 @@ article{
   border-radius: 10px;
   position: sticky;
   left : 20px;
-  top : 20%; 
-}
+  top : 20%;
 
-#menuCompetences li{
-    padding-bottom: 5px;
+  li{
+  	padding-bottom: 5px;
   }
 
-#menuCompetences a {
+  a {
     text-decoration: none;
     color: silver;
     font-weight: bold;
+    &:hover{
+    	color:rgba(10, 173, 255, 0.5);
+    }
   }
+}
 
 #titleBackground{
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 200px;
-  background: url("GenshinImages/listCharacters.jpg") no-repeat 0 -190px;
+  background: url("GenshinImages/listCharacters.jpg") border-box no-repeat 0 -190px;
   background-size: 125%;
   border-radius: 10px 10px 0 0;
 }
@@ -204,12 +202,13 @@ article{
 #titleCharacters {
   width: 100%;
   padding : 0 0 20px 130px;
-  & > h1{
+  h1{
+  	padding-top : 50px;
     font-weight: bold;
     text-shadow: 2px 2px 5px black;
     font-size: 4em;
     font-weight: normal;
-    margin-bottom: -8px;
+    margin-top: 0px;
     color: #0AADFF;
   }
 }
@@ -244,7 +243,7 @@ $color-btn: #15DEA5;
 
 }
 
-
+//A REVOIR QUAND LES PAGES 4* et 5* SERONT FAITES
 .selectionCharacters4 {
   width : 100px;
   height : 439px;
@@ -255,12 +254,12 @@ $color-btn: #15DEA5;
   cursor : pointer;
   position : relative;
   z-index : 1;
-  transition :transform 500ms, background-color 300ms ease-in-out;
+  transition :transform 500ms ease-in-out;
   &:hover {
     transform: scale(1.05);
-    &::after {
+    /*&::after {
       opacity: 0;
-    }
+    }*/
   }
   
   &::after { 
@@ -272,7 +271,7 @@ $color-btn: #15DEA5;
     bottom: 0;
     border-radius: $border-rad;
     background: black;
-    opacity: 0.3;
+    opacity: 0.8;
     z-index : 2;
     transition : opacity 400ms;
   }
@@ -288,7 +287,41 @@ $color-btn: #15DEA5;
   cursor : pointer;
   position : relative;
   z-index : 1;
-  transition :transform 500ms, background-color 300ms ease-in-out;
+  transition :transform 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    /*&::after {
+      opacity: 0;
+    }*/
+  }
+  
+  &::after { 
+    content :"";
+    position : absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: $border-rad;
+    background: black;
+    opacity: 0.8;
+    z-index : 2;
+    transition : opacity 400ms;
+  }
+}
+
+// A ENLEVER QUAND LES 5* SERONT FAITES. HTML A REMETTRE POUR DILUC
+.selectionCharactersDiluc {
+  width : 100px;
+  height : 439px;
+  margin-right: 15px;
+  border : 3px solid #F39C12;
+  border-radius: $border-rad;
+  background : silver;
+  cursor : pointer;
+  position : relative;
+  z-index : 1;
+  transition :transform 500ms ease-in-out;
   &:hover {
     transform: scale(1.05);
     &::after {
@@ -310,6 +343,7 @@ $color-btn: #15DEA5;
     transition : opacity 400ms;
   }
 }
+
 
 /*------------------------------------ PIED DE LA PAGE --------------------------------------*/
 
@@ -331,11 +365,9 @@ $color-btn: #15DEA5;
 {
   width: 35%;
   padding-right: 40px;
-}
-
-#Actualites li, #Liens_utiles li
-{
-  padding-bottom: 10px;
+  li{
+  	padding-bottom: 10px;
+  }
 }
 
 
