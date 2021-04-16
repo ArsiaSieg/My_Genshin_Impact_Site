@@ -153,6 +153,10 @@ section{
 		font-weight: bold;
 	}
 
+#menuCompetences a:hover{
+    	color:rgba(131, 17, 1, 0.5);
+    }
+
 
 #character
 {
