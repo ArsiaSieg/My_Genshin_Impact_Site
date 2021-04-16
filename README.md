@@ -8,7 +8,7 @@ CLONE REPOSITORY
 
 
 WATCH THE SITE
-5) Launch "SelectCharacters.html" in the repository.
-6) Navigate and enjoy!
+1) Launch "SelectCharacters.html" in the repository.
+2) Navigate and enjoy!
 
 
