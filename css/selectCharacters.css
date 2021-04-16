@@ -44,6 +44,7 @@ td p {
   padding-top: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   position: sticky;
+  z-index: 2;
   top: -155px; }
 
 #reseaux {
@@ -56,18 +57,20 @@ td p {
   border-radius: 5px;
   margin-right: 30px;
   transition: transform 0.2s ease-in-out; }
-  #Discord:hover {
-    transform: scale(1.1);
-    background-color: silver; }
+
+ #Discord:hover {
+   transform: scale(1.1);
+   background-color: silver; }
 
 #Twitter {
   padding: 3px 15px 3px 15px;
   background-color: #3498DB;
   border-radius: 5px;
   transition: transform 0.2s ease-in-out; }
-  #Twitter:hover {
-    transform: scale(1.1);
-    background-color: silver; }
+ 
+ #Twitter:hover {
+   transform: scale(1.1);
+   background-color: silver; }
 
 #entête a {
   text-decoration: none;
@@ -147,7 +150,8 @@ article {
 #titleCharacters {
   width: 100%;
   padding: 0 0 20px 130px; }
-  #titleCharacters > h1 {
+ 
+ #titleCharacters > h1 {
     font-weight: bold;
     text-shadow: 2px 2px 5px black;
     font-size: 4em;
@@ -183,18 +187,21 @@ article {
   position: relative;
   z-index: 1;
   transition: transform 500ms, background-color 300ms ease-in-out; }
-  .selectionCharacters4:hover {
+
+.selectionCharacters4:hover {
     transform: scale(1.05); }
-    .selectionCharacters4:hover::after {
-      opacity: 0; }
-  .selectionCharacters4::after {
+
+.selectionCharacters4:hover::after {
+    opacity: 0; }
+
+.selectionCharacters4::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
-    border-radius: 2rem;
+    bottom: -1px;
+    border-radius: 1.8rem;
     background: black;
     opacity: 0.3;
     z-index: 2;
@@ -211,18 +218,21 @@ article {
   position: relative;
   z-index: 1;
   transition: transform 500ms, background-color 300ms ease-in-out; }
-  .selectionCharacters5:hover {
+
+.selectionCharacters5:hover {
     transform: scale(1.05); }
-    .selectionCharacters5:hover::after {
-      opacity: 0; }
-  .selectionCharacters5::after {
+
+ .selectionCharacters5:hover::after {
+    opacity: 0; }
+
+.selectionCharacters5::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
-    border-radius: 2rem;
+    bottom: -1px;
+    border-radius: 1.8rem;
     background: black;
     opacity: 0.3;
     z-index: 2;
