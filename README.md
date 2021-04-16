@@ -6,6 +6,7 @@ CLONE REPOSITORY
 2) Enter : $ git clone  https://github.com/ArsiaSieg/My_Genshin_Impact.git
 3) Go to the folder where you clone.
 
+
 WATCH THE SITE
 5) Launch "SelectCharacters.html" in the repository.
 6) Navigate and enjoy!
