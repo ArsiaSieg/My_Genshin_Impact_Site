@@ -1,4 +1,4 @@
-# My_Genshin_Impact_Site
+# my_genshin_impact_site
 Mini project to training the HTML/CSS/SASS language.
 
 CLONE REPOSITORY
