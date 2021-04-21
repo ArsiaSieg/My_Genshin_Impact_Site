@@ -136,7 +136,7 @@ article {
   display: block;
   width: 100%;
   height: 200px;
-  background: url("../img/ListCharacters.jpg") border-box no-repeat 0 -190px;
+  background: url("../img/selectBackground.jpg") border-box no-repeat 0 -190px;
   background-size: 125%;
   border-radius: 10px 10px 0 0; }
 
