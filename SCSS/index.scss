@@ -1,9 +1,30 @@
+$color_tertiary : #bd3e3e;
+$color_secondary : #700f0f;
+$color_primary : #3f1515;
+$color_quatiary : rgba(31, 8, 8, .8); //#1f0808
+
+
+@font-face {
+    font-family: 'abhaya_libreregular';
+    src: url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot');
+    src: url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff') format('woff'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body
 {
   background: url("../img/Background.jpg") no-repeat fixed;
   font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
+  margin : 0;
 }
 
 
@@ -18,43 +39,14 @@ h3
   margin-top: -20px;
 }
 
-table
-{
-  margin-bottom: 30px;
-}
-
-
-td
-{
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-td p
-{
-  line-height: 1.8em;
-  padding-left: 5px;
-}
-
-
-.separateur
-{
+.separateur_top{
   display: block;
-  width: 90%;
+  width: 88%;
   height: auto;
-  margin: auto;
-  padding : 20px 0 20px 0;
-
-  &_top{
-  display: block;
-  width: 100%;
-  margin-top: -15px;
-  height: auto;
+  margin : auto;
   position: relative;
-  }
-}
-
-
+  top : -50px;
+} 
 //----------------------------------- ENTÊTE DE LA PAGE ---------------------------------------
 
 #entête
@@ -146,128 +138,200 @@ td p
 
 
 //----------------------------------- CORPS DE LA PAGE ---------------------------------------
+
 section{
+  width : 60%;
+  margin: 2em auto 3em auto;
+}
+
+.title_banner{
   display: flex;
-  justify-content: center;
-  width: 60%;
-  margin: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border : 2px solid rgba(10, 173, 255, 0.5);
-  border-radius: 10px;
+  align-items : center;
+  background: url("../img/selectBackground.png") no-repeat 0 -190px;
+  background-color : #032130;
+  box-shadow: -3px 3px 5px black;
 }
 
-article{
-  width: 100%;
+
+.title_logo{
+  flex : 1;
+  max-width: 6em;
+  max-height: 6em;      
 }
 
-#menuElements{
-  list-style-image: url("../img/ico_liensexterne.png");
-  list-style-type: none;
-  width: 240px;
-  height : 180px;
-  margin-left : -260px;
-  margin-right: 15px;
-  border : 2px solid rgba(10, 173, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  position: sticky;
-  left : 20px;
-  top : 20%;
+.liyue{
+  box-shadow : -3px 3px 5px black;
+}
 
-  li{
-  	padding-bottom: 5px;
+.mondstadt{
+  box-shadow : 3px 3px 5px black;
+}
+
+.name{
+  flex : 2;
+  padding : 0 .5em;
+  text-align : center;
+  font-family: 'abhaya_libreregular';
+  font-size: 3em;
+  color: #0AADFF;
+
+  h1{
+    text-shadow: 5px 5px 5px black;
+    margin : 0 0 0 0;
   }
+}
+  
 
-  a {
-    text-decoration: none;
-    color: silver;
-    font-weight: bold;
-    &:hover{
-    	color:rgba(10, 173, 255, 0.5);
+.description{
+  width : 90%;
+  height : 100%;
+  margin : auto;
+  padding : 2em 2em 10% 2em;
+  background: linear-gradient(#032130 60%, transparent);
+}
+
+
+.contentBox{
+  position : relative;
+
+  &.active{
+    .elementCharacters{
+      &_anemo{
+        background-color : rgba(210, 255, 217,.3); /*#D2FFD9*/
+      }
+
+      &_pyro{
+        background-color : rgba(255, 219, 210,.3); /*#FFDBD2*/
+      }
+
+      &_electro{
+        background-color : rgba(235, 210, 255,.3); /*#EBD2FF*/
+      }
+
+      &_cryo{
+        background-color : rgba(210, 244, 255,.3); /*#D2F4FF*/
+      }
+
+      &_geo{
+        background-color : rgba(255, 245, 210,.3); /*#FFF5D2*/
+      }
+
+      &_hydro{
+        background-color : rgba(210, 220, 255,.3); /*#D2DCFF*/
+      }
+
+      &_dendro{
+        background-color : rgba(234, 255, 210,.3); /*#D2FFF0*/
+      }
+    }
+    
+    .listCharacters{
+      height : 30em;
+      padding : 2em 2em;
     }
   }
 }
 
-#titleBackground{
-  display: block;
-  width: 100%;
-  height: 200px;
-  background: url("../img/selectBackground.jpg") border-box no-repeat 0 -190px;
-  background-size: 125%;
-  border-radius: 10px 10px 0 0;
-}
+.elementCharacters{
+  display: flex;
+  align-items : center;
+  cursor : pointer;
 
-#titleCharacters {
-  width: 100%;
-  padding : 0 0 20px 130px;
-  h1{
-  	padding-top : 50px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px black;
-    font-size: 4em;
-    font-weight: normal;
-    margin-top: 0px;
-    color: #0AADFF;
+  &_anemo{
+      &:hover{
+      background-color : rgba(210, 255, 217,.3); /*#D2FFD9*/
+    }
+  }
+
+  &_pyro{
+      &:hover{
+      background-color : rgba(255, 219, 210,.3); /*#FFDBD2*/
+    }
+  }
+
+  &_electro{
+      &:hover{
+      background-color : rgba(235, 210, 255,.3); /*#EBD2FF*/
+    }
+  }
+
+  &_cryo{
+      &:hover{
+      background-color : rgba(210, 244, 255,.3); /*#D2F4FF*/
+    }
+  }
+
+  &_geo{
+      &:hover{
+      background-color : rgba(255, 245, 210,.3); /*#FFF5D2*/
+    }
+  }
+
+  &_hydro{
+      &:hover{
+      background-color : rgba(210, 220, 255,.3); /*#D2DCFF*/
+    }
+  }
+
+  &_dendro{
+      &:hover{
+      background-color : rgba(234, 255, 210,.3); /*#D2FFF0*/
+    }
+  }
+
+  img{
+    width : 5%;
+    height : 5%;
+    margin : auto 10px;
   }
 }
 
-.margin{
-  margin : 0 50px 20px 50px;
-}
-
-
-#elementCharacters{
-    display: flex;
-}
-
-.titleElement{
-  margin-right : 10px;
-}
 
 .listCharacters{
   display: flex;
+  align-content : start;
+  flex-wrap: wrap;
+  height : 0;
+  padding : 0em 2em;
+  position : relative;
+  overflow : hidden;
+  transition : .5s;
+  overflow-y: auto;
 }
 
 
-
-
-$border-rad: 2rem;
-$color-btn: #15DEA5;
+$width_avatar : 285px;
+$height_avatar : $width_avatar/2;
 
 .avatar{
-  width : 100px;
-  height : auto;
-  border-radius: $border-rad;
+  width : $width_avatar;
+  height : $height_avatar ;
 
 }
 
 //A REVOIR QUAND LES PAGES 4* et 5* SERONT FAITES
 .selectionCharacters4 {
-  width : 100px;
-  height : 439px;
-  margin-right: 15px;
+  width : $width_avatar ;
+  height: $height_avatar ;
+  margin : .5em;
   border : 3px solid #9B59B6;
-  border-radius: $border-rad;
-  background : silver;
   cursor : pointer;
   position : relative;
   z-index : 1;
   transition :transform 500ms ease-in-out;
   span{
-    width : 95px;
-    font-size : 1.5rem;
+    width : auto;
+    padding : .5em;
+    font-size : 1.6rem;
+    font-weight: bold;
     text-align : center;
     color : rgba(0, 0, 0, 0);
-    background-color : rgba(155, 89, 182, 0); 
-    padding : .3rem;
     z-index : 1;
     position : absolute;
-    right : -2px;
-    bottom: 7%;
+    left : 0;
+    top : 2%;
     transform : translateY(-10%);
-    transition : transform 600ms, color 500ms, background-color 500ms, text-shadow 500ms ease-in-out;
+    transition : transform 600ms, color 500ms, text-shadow 500ms ease-in-out;
   }
 
   &:hover {
@@ -275,22 +339,17 @@ $color-btn: #15DEA5;
     span {
       transform : translateY(0%);
       color : rgba(155, 89, 182, 1);
-      text-shadow: 3px 3px 2px black;
-      background-color : rgba(155, 89, 182, 1); 
+      text-shadow: 2px 2px 2px black;
     }
-    /*&::after {
-      opacity: 0;
-    }*/
   }
   
-  &::after { 
+ &::after { 
     content :"";
     position : absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    border-radius: $border-rad;
     background: black;
     opacity: 0.8;
     z-index : 2;
@@ -299,29 +358,26 @@ $color-btn: #15DEA5;
 }
 
 .selectionCharacters5 {
-  width : 100px;
-  height : 439px;
-  margin-right: 15px;
+  width : $width_avatar;
+  height : $height_avatar ;
+  margin : .5em;
   border : 3px solid #F39C12;
-  border-radius: $border-rad;
-  background : silver;
   cursor : pointer;
   position : relative;
   z-index : 1;
   transition :transform 500ms ease-in-out;
   span{
-  	width : 95px;
+  	width : auto;
   	font-size : 1.5rem;
   	text-align : center;
   	color : rgba(0, 0, 0, 0);
-  	background-color : rgba(255, 146, 50, 0); 
   	padding : .3rem;
   	z-index : 1;
   	position : absolute;
-  	right : -2px;
-  	bottom: 7%;
+  	left : 0;
+    top : 2%;
   	transform : translateY(-10%);
-  	transition : transform 600ms, color 500ms, background-color 500ms, text-shadow 500ms ease-in-out;
+  	transition : transform 600ms, color 500ms, text-shadow 500ms ease-in-out;
   }
 
   &:hover {
@@ -330,11 +386,7 @@ $color-btn: #15DEA5;
   		transform : translateY(0%);
   		color : rgba(243, 156, 18, 1);
   		text-shadow: 3px 3px 2px black;
-  		background-color : rgba(255, 146, 50, 1); 
     }
-    /*&::after {
-      opacity: 0;
-    }*/
   }
   
   &::after { 
@@ -344,7 +396,6 @@ $color-btn: #15DEA5;
     right: 0;
     left: 0;
     bottom: 0;
-    border-radius: $border-rad;
     background: black;
     opacity: 0.8;
     z-index : 2;
@@ -353,30 +404,27 @@ $color-btn: #15DEA5;
 }
 
 // A ENLEVER QUAND LES 5* SERONT FAITES. HTML A REMETTRE POUR DILUC
-.selectionCharactersDiluc {
-  width : 100px;
-  height : 439px;
-  margin-right: 15px;
+.selectionCharacters5valided {
+  width : $width_avatar;
+  height : $height_avatar ;
+  margin : .5em;
   border : 3px solid #F39C12;
-  border-radius: $border-rad;
-  background : silver;
   cursor : pointer;
   position : relative;
   z-index : 1;
   transition :transform 500ms ease-in-out;
   span{
-  	width : 95px;
+  	width : auto;
   	font-size : 1.5rem;
   	text-align : center;
   	color : rgba(0, 0, 0, 0);
-  	background-color : rgba(255, 146, 50, 0); 
-  	padding : .3rem;
+     	padding : .3rem;
   	z-index : 1;
   	position : absolute;
-  	right : -2px;
-  	bottom: 7%;
+  	left : 0;
+    top : 2%;
   	transform : translateY(-10%);
-  	transition : transform 600ms, color 500ms, background-color 500ms, text-shadow 500ms ease-in-out;
+  	transition : transform 600ms, color 500ms, text-shadow 500ms ease-in-out;
   }
 
   &:hover{
@@ -385,7 +433,6 @@ $color-btn: #15DEA5;
   		transform : translateY(0%);
   		color : rgba(243, 156, 18, 1);
   		text-shadow: 3px 3px 2px black;
-  		background-color : rgba(255, 146, 50, 1); 
     }
 
     &::after {
@@ -400,11 +447,22 @@ $color-btn: #15DEA5;
     right: 0;
     left: 0;
     bottom: 0;
-    border-radius: $border-rad;
     background: black;
     opacity: 0.3;
     z-index : 2;
     transition : opacity 400ms;
+  }
+}
+
+.background{
+  &_liyue{
+    background: url("../img/liyue.png");
+    background-size : cover;
+  }
+
+  &_mondstadt{
+    background: url("../img/mondstadt.png");
+    background-size: cover;
   }
 }
 
