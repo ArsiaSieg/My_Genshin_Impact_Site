@@ -1,0 +1,237 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'abhaya_libreregular';
+  src: url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot");
+  src: url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff2") format("woff2"), url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff") format("woff"), url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.ttf") format("truetype"), url("../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background: url("../img/mondstadt.png") no-repeat fixed, linear-gradient(#3f1515, #700f0f) no-repeat fixed;
+  font-family: 'Helvetica', 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  font-size: 1.2em;
+  color: white; }
+
+/*----------------------------------- ENTÊTE DE LA PAGE ---------------------------------------*/
+#entête {
+  width: 100%;
+  height: 190px;
+  margin-top: -1%;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  z-index: 2;
+  top: -157px; }
+
+#reseaux {
+  display: flex;
+  justify-content: center; }
+
+#Discord {
+  padding: 3px 15px 3px 15px;
+  background-color: #21357d;
+  border-radius: 5px;
+  margin-right: 30px; }
+
+#Twitter {
+  padding: 3px 15px 3px 15px;
+  background-color: #3498DB;
+  border-radius: 5px; }
+
+#Discord:hover, #Twitter:hover {
+  transform: scale(1.1);
+  background-color: silver; }
+
+#entête a {
+  text-decoration: none;
+  color: silver;
+  font-weight: bold; }
+  #entête a:hover {
+    border-bottom: 1px solid silver; }
+
+#logo_top {
+  width: 10%;
+  height: auto;
+  display: block;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#menuPrincipal {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; }
+  #menuPrincipal li {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+/*----------------------------------- MENU DE NAVIGATION LATÉRAL ---------------------------------------*/
+.menuLateral {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: -200px; }
+  .menuLateral .circle {
+    width: 300px;
+    height: 390px;
+    border-radius: 50%;
+    border-top: 10px solid rgba(31, 8, 8, 0.8);
+    border-right: 3px solid rgba(31, 8, 8, 0.8);
+    border-bottom: 10px solid rgba(31, 8, 8, 0.8); }
+  .menuLateral ul li {
+    padding: 1.5em 0;
+    list-style-type: none;
+    list-style-image: url("../img/UI_Fire_puce.png");
+    position: relative;
+    left: -65%; }
+  .menuLateral ul .puce2 {
+    left: -27%; }
+  .menuLateral ul .puce3 {
+    left: -17%; }
+  .menuLateral ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #bd3e3e; }
+    .menuLateral ul a:hover {
+      border-bottom: 2px solid #bd3e3e; }
+
+/*----------------------------------- CORPS DE LA PAGE ---------------------------------------*/
+section {
+  width: 80%;
+  margin-left: 20%; }
+  section .content {
+    margin: 2em 10em 3em 0; }
+    section .content .Profil {
+      width: 50%;
+      height: auto;
+      position: absolute;
+      z-index: 1;
+      right: 3.5em; }
+    section .content .section {
+      margin-bottom: 5em; }
+      section .content .section .title_banner {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to left, transparent, #3f1515);
+        box-shadow: -3px 3px 5px black; }
+        section .content .section .title_banner .title_logo {
+          width: 6em;
+          height: 6em;
+          box-shadow: 3px 3px 5px black; }
+        section .content .section .title_banner .name {
+          padding: 0 .5em;
+          font-family: 'abhaya_libreregular';
+          font-size: 3em;
+          color: #bd3e3e; }
+          section .content .section .title_banner .name h1 {
+            text-shadow: 5px 5px 5px black;
+            margin: 0 0 0 0; }
+        section .content .section .title_banner .voice {
+          max-width: 40%;
+          font-size: 1em;
+          position: relative;
+          left: 14em; }
+          section .content .section .title_banner .voice p {
+            font-size: 0.8em;
+            color: #bd3e3e; }
+          section .content .section .title_banner .voice em {
+            color: white; }
+          section .content .section .title_banner .voice img {
+            width: .7em;
+            height: .7em; }
+      section .content .section .description {
+        width: 86.7%;
+        height: 100%;
+        margin: 0 3em;
+        padding: 2em 2em 10% 2em;
+        text-align: justify;
+        text-shadow: 3px 3px 3px black;
+        background: linear-gradient(rgba(31, 8, 8, 0.8) 60%, transparent); }
+        section .content .section .description_exception {
+          padding: 2em 2em 15% 2em; }
+          section .content .section .description_exception p {
+            width: 70%; }
+            section .content .section .description_exception p strong {
+              color: #bd3e3e; }
+        section .content .section .description .caracteristiques {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 70%;
+          margin-top: 2em; }
+          section .content .section .description .caracteristiques .attribut {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15em; }
+            section .content .section .description .caracteristiques .attribut img {
+              width: 40px;
+              height: 40px;
+              margin: .5em; }
+        section .content .section .description .skill {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          margin: 2em auto;
+          background: linear-gradient(to left, transparent, #3f1515 10%, #3f1515 90%, transparent); }
+          section .content .section .description .skill .cellule_gif {
+            text-align: center;
+            min-width: 35%; }
+            section .content .section .description .skill .cellule_gif img {
+              width: 100%;
+              border-top: 3px solid white;
+              border-bottom: 3px solid white;
+              border-radius: 50%; }
+            section .content .section .description .skill .cellule_gif p {
+              width: 60%;
+              height: 1.7em;
+              margin: -2.2em auto 2.2em auto;
+              padding-top: .5em;
+              font-size: .8em;
+              color: #3f1515;
+              text-shadow: none;
+              background-color: white;
+              border-radius: 100%;
+              position: relative;
+              z-index: 1; }
+          section .content .section .description .skill .stats {
+            min-height: 200px;
+            padding: 2em;
+            line-height: 1.5em;
+            text-align: justify; }
+        section .content .section .description .passif {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          margin: 2em auto;
+          background: linear-gradient(to left, transparent, #3f1515 10%, #3f1515 90%, transparent);
+          font-size: 80%; }
+          section .content .section .description .passif .cellule_gif {
+            text-align: center;
+            min-width: 35%; }
+            section .content .section .description .passif .cellule_gif img {
+              width: 5.5em;
+              box-shadow: 5px 5px 5px black;
+              border-top: 3px solid white;
+              border-bottom: 3px solid white;
+              background-color: #bd3e3e;
+              border-radius: 50%; }
+            section .content .section .description .passif .cellule_gif p {
+              width: 20%;
+              height: 1.7em;
+              margin: -2em auto 2.2em auto;
+              padding-top: .5em;
+              font-size: .8em;
+              color: #3f1515;
+              text-shadow: none;
+              background-color: white;
+              border-radius: 100%;
+              position: relative;
+              z-index: 1; }
+          section .content .section .description .passif .stats {
+            min-width: 65%;
+            padding: 2em;
+            line-height: 1.5em;
+            text-align: justify; }
