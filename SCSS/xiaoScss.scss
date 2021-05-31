@@ -1,0 +1,461 @@
+$color_tertiary : #3ea5bd;
+$color_secondary : #0f5670;
+$color_primary : #152d3f;
+$color_quatiary : rgba(8, 21, 31, .8);
+
+
+@font-face {
+    font-family: 'abhaya_libreregular';
+    src: url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot');
+    src: url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.woff') format('woff'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
+         url('../font/Abhaya_libreregular/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+body
+{
+	background: url("../img/liyue.png") no-repeat fixed, 
+	linear-gradient($color_primary, $color_secondary) no-repeat fixed;
+	font-family: 'Helvetica', 'Open Sans', Arial, sans-serif;
+	margin : 0;
+	font-size: 1.2em;
+	color: white;
+}
+
+
+/*----------------------------------- ENTÊTE DE LA PAGE ---------------------------------------*/
+
+#entête
+{
+	width: 100%;
+	height: 190px;
+	margin-top: -1%;
+	padding-top: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: sticky;
+	z-index: 2;
+	top : -157px;
+
+	a{
+		text-decoration: none;
+		color: silver;
+		font-weight: bold;
+
+		&:hover{
+			border-bottom: 1px solid silver;
+		}
+	}
+}
+
+#reseaux
+{
+	display: flex;
+	justify-content: space-around;
+	width : 10%;
+	margin : auto;
+}
+
+
+.icon
+{
+	padding: 3px 15px 3px 15px;
+	border-radius: 5px;
+	&:hover{
+		transform: scale(1.1);
+		background-color : silver;
+	}
+}
+
+.Discord{
+	background-color: rgb(33, 53, 125);
+}
+
+.Twitter
+{
+	background-color: #3498DB ;
+}
+
+
+#logo_top
+{
+	width: 10%;
+	height: auto;
+	display: block;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menuPrincipal
+{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+
+	li{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+/*----------------------------------- MENU DE NAVIGATION LATÉRAL ---------------------------------------*/
+.circle{
+	width : 300px;
+	height : 390px;
+	border-radius : 50%;
+	border-top: 10px solid $color_quatiary;
+	border-right: 3px solid $color_quatiary;
+	border-bottom: 10px solid $color_quatiary;
+}
+
+
+.menuLateral{
+	display: flex;
+	align-items : center;
+	position : fixed;
+	left : -200px;
+
+	ul{
+		li{
+			padding : 1.5em 0;
+			list-style-type: none;
+			list-style-image: url('../img/UI_Wind_puce.png');
+			position : relative;
+			left : -55%;
+		}
+
+		.puce2{
+			left : -23%;
+		}
+
+		.puce3{
+			left : -15%;
+		}
+
+		a{
+			text-decoration: none;
+			font-weight: bold;
+			color : $color_tertiary;
+
+			&:hover{
+				border-bottom : 2px solid $color_tertiary;
+			}
+		}	
+	}
+	
+}
+
+
+/*----------------------------------- CORPS DE LA PAGE ---------------------------------------*/
+section{
+	width: 80%;
+	margin-left: 20%;
+}
+
+.content{
+	margin: 2em 10em 3em 0;
+}
+
+.Profil{
+	width : 50%;
+	height: auto;
+	position : absolute;
+	z-index: 1;
+	right : 3.5em;
+}
+
+.section{
+	margin-bottom: 3em;
+}
+
+.title_banner{
+	display: flex;
+	align-items : center;
+	background: linear-gradient(to left , transparent, $color_primary);
+	box-shadow: -3px 3px 5px black;
+}
+
+
+.title_logo{
+	width: 6em;
+	height: 6em;
+	box-shadow : 3px 3px 5px black;
+}
+
+.name{
+	padding : 0 .5em;
+	font-family: 'abhaya_libreregular';
+	font-size: 3em;
+	color : $color_tertiary;
+
+	h1{
+		text-shadow: 5px 5px 5px black;
+		margin : 0 0 0 0;
+	}
+}
+
+.voice{
+	max-width: 40%;
+	font-size: 1em;
+	position : relative;
+	left : 14em;
+
+	p{
+		font-size: 0.8em;
+		color : $color_tertiary;
+	}
+
+	em{
+		color : white;
+	}
+
+	img{
+		width: .7em;
+		height: .7em;
+	}
+}
+			
+
+.description{
+	width : 86.7%;
+	height : 100%;
+	margin : 0 3em;
+	padding : 2em 2em 10% 2em;
+	text-shadow: 3px 3px 3px black;
+	background: linear-gradient($color_quatiary 60%, transparent);
+
+	&_exception{
+		padding : 2em 2em 15% 2em;
+
+		p{
+		width: 70%;
+
+			strong{
+				color : $color_tertiary;
+			}
+		}
+	}
+
+	&_build{
+		display : flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+
+.caracteristiques{
+	display: flex;
+	justify-content: space-between;
+	align-items : center;
+	width: 70%;
+	margin-top: 2em;
+}
+
+
+.attribut{
+	display: flex;
+	justify-content: center;
+	align-items : center;
+	width: 15em;
+
+	img{
+	width: 40px;
+	height: 40px;
+	margin : .5em;
+	}
+}
+
+
+.skill{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin : 2em auto;
+	background : linear-gradient(to left, transparent, $color_primary 10%, $color_primary 90%, transparent);
+
+	.cellule_gif{
+		text-align: center;
+		min-width: 35%;
+
+		img{
+			width: 100%;
+			border: 5px solid $color_tertiary;
+			border-radius : 30%;
+		}
+
+		p{
+			width: 60%;
+			height: 1.7em;
+			margin : -2.2em auto 2.2em auto;
+			padding-top : .5em;
+			font-size: .8em;
+			color : white;
+			font-weight: bold;
+			text-shadow: none;
+			background-color : $color_secondary;
+			border: 3px solid $color_tertiary;
+			border-radius : 100%;
+			position: relative;
+			z-index: 1;
+		}	
+	}
+
+	.stats{
+		min-height: 200px;
+		padding : 2em;
+		line-height: 1.5em;
+		text-align: justify;
+
+	}
+}
+
+
+	
+
+.passif, .constellation, .recettes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin : 2em auto;
+	background : linear-gradient(to left, transparent, $color_primary 10%, $color_primary 90%, transparent);
+	font-size : 80%;
+
+	.cellule_gif{
+		text-align: center;
+		min-width: 35%;
+
+		img{
+			width: 5.5em;
+			box-shadow: 5px 5px 5px black;
+			border-radius : 50%;
+		}
+
+		p{
+			width: 27%;
+			height : 1.7em;
+			margin : -2em auto 2.2em auto;
+			padding-top : .5em;
+			font-size: .8em;
+			color : white;
+			text-shadow: none;
+			border: 2px solid $color_tertiary;
+			background-color : $color_secondary;
+			border-radius : 100%;
+			position: relative;
+			z-index: 1;
+		}
+
+		&_recettes{
+			min-width: 25%;
+		}
+	}
+
+	.stats{
+		min-width: 65%;
+		padding : 2em;
+		line-height: 1.5em;
+		text-align: justify;
+
+		&_recettes{
+			min-width: 30%; 
+		}
+
+	}
+}
+
+.talents, .ascension{
+	width : 30%;
+	margin-bottom : 1em;
+
+	h1{
+		width: 60%;
+		padding : .5em;
+		background: linear-gradient(to left , transparent, $color_secondary);
+	}
+
+	.talents_secondary{
+		width : 4em;
+	}
+
+}
+
+.build_categories{
+	display: flex;
+	justify-content: space-around;
+	align-items : center;
+	flex-wrap : wrap;
+	background : linear-gradient(to left, transparent, $color_secondary 10%, $color_secondary 90%, transparent);
+
+	img{
+		width: 5.5em;
+		margin : auto;
+	}
+}
+
+.ascension_gems{
+		display: flex;
+		justify-content: center;
+		align-items : center;
+		flex-wrap: wrap;
+		width : 6em;
+
+		img{
+			width : 3em;
+		}
+	}
+
+
+.weapon, .artefacts{
+	width : 65%;
+	margin-bottom : 1em;
+
+	img{
+		width: 5em;
+		padding-top : 1em;
+	}
+
+	h1{
+		width: 55%;
+		padding : .5em;
+		background: linear-gradient(to left , transparent, $color_secondary);
+	}
+
+	&_categories{
+		text-align : center;
+
+		p{
+			max-width : 8em;
+		}
+	}
+}
+
+.combinaison {
+	justify-content: center;
+	margin-bottom: .5em;
+	img{
+		width: 4em;
+		margin : 0 0 0 .5em;
+	}
+}
+
+.separateur_vertical{
+	height : 76.5%;
+	position: absolute;
+	left : 44%;
+}				
+			
+		
+
+
+
