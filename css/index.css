@@ -197,11 +197,11 @@ section {
 
 .avatar {
   width: 285px;
-  height: 142.5px; }
+  height: 157.5px; }
 
 .selectionCharacters4 {
   width: 285px;
-  height: 142.5px;
+  height: 157.5px;
   margin: .5em;
   border: 3px solid #9B59B6;
   cursor: pointer;
@@ -241,7 +241,7 @@ section {
 
 .selectionCharacters5 {
   width: 285px;
-  height: 142.5px;
+  height: 157.5px;
   margin: .5em;
   border: 3px solid #F39C12;
   cursor: pointer;
@@ -280,7 +280,7 @@ section {
 
 .selectionCharacters5valided {
   width: 285px;
-  height: 142.5px;
+  height: 157.5px;
   margin: .5em;
   border: 3px solid #F39C12;
   cursor: pointer;

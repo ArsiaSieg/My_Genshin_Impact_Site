@@ -130,15 +130,15 @@ body
 			list-style-type: none;
 			list-style-image: url('../img/UI_Wind_puce.png');
 			position : relative;
-			left : -55%;
+			left : -65%;
 		}
 
 		.puce2{
-			left : -23%;
+			left : -27%;
 		}
 
 		.puce3{
-			left : -15%;
+			left : -17%;
 		}
 
 		a{
@@ -200,6 +200,7 @@ section{
 	h1{
 		text-shadow: 5px 5px 5px black;
 		margin : 0 0 0 0;
+		text-transform: uppercase;
 	}
 }
 
@@ -358,6 +359,10 @@ section{
 
 		&_recettes{
 			min-width: 25%;
+
+			h2{
+				height: 3em;
+			}
 		}
 	}
 
@@ -436,6 +441,7 @@ section{
 
 		p{
 			max-width : 8em;
+			height: 2em;
 		}
 	}
 }

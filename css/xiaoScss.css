@@ -83,11 +83,11 @@ body {
     list-style-type: none;
     list-style-image: url("../img/UI_Wind_puce.png");
     position: relative;
-    left: -55%; }
+    left: -65%; }
   .menuLateral ul .puce2 {
-    left: -23%; }
+    left: -27%; }
   .menuLateral ul .puce3 {
-    left: -15%; }
+    left: -17%; }
   .menuLateral ul a {
     text-decoration: none;
     font-weight: bold;
@@ -131,7 +131,8 @@ section {
   color: #3ea5bd; }
   .name h1 {
     text-shadow: 5px 5px 5px black;
-    margin: 0 0 0 0; }
+    margin: 0 0 0 0;
+    text-transform: uppercase; }
 
 .voice {
   max-width: 40%;
@@ -246,6 +247,8 @@ section {
       z-index: 1; }
     .passif .cellule_gif_recettes, .constellation .cellule_gif_recettes, .recettes .cellule_gif_recettes {
       min-width: 25%; }
+      .passif .cellule_gif_recettes h2, .constellation .cellule_gif_recettes h2, .recettes .cellule_gif_recettes h2 {
+        height: 3em; }
   .passif .stats, .constellation .stats, .recettes .stats {
     min-width: 65%;
     padding: 2em;
@@ -296,7 +299,8 @@ section {
   .weapon_categories, .artefacts_categories {
     text-align: center; }
     .weapon_categories p, .artefacts_categories p {
-      max-width: 8em; }
+      max-width: 8em;
+      height: 2em; }
 
 .combinaison {
   justify-content: center;

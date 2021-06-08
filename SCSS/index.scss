@@ -301,7 +301,7 @@ section{
 
 
 $width_avatar : 285px;
-$height_avatar : $width_avatar/2;
+$height_avatar : $width_avatar/2 +15;
 
 .avatar{
   width : $width_avatar;
